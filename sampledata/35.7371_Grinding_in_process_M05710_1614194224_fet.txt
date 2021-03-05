@@ -1,0 +1,2 @@
+planid	partnb	id	type	idsymbol	subtype	segmid	subid	x	y	z	nx	ny	nz	diameter	diameter2	a1	a2	angle	apexAngle	distance	expansionA	expansionB	len	numberOfPoints	sigma	minDev	maxDev	form	comment	pxn	pyn	pzn	referenceSystemName	allReferencesName	nom_x	nom_y	nom_z	nom_nx	nom_ny	nom_nz	nom_diameter	nom_diameter2	nom_a1	nom_a2	nom_angle	nom_apexAngle	nom_distance	nom_expansionA	nom_expansionB	nom_len	
+END

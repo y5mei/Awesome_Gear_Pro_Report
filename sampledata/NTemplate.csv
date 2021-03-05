@@ -1,0 +1,4 @@
+﻿Label,Description,USL,LSL,Function,Argument,Comments
+Dim228,Right_Drive_fHam_T,0.008,-0.008,AVERAGE,0-3-6-9,
+Dim228,Right_Drive_fHam_M,0.008,-0.008,AVERAGE,1-4-7-10,
+Dim228,Right_Drive_fHam_B,0.008,-0.008,AVERAGE,2-5-8-11,

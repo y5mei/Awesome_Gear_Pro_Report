@@ -1,0 +1,3 @@
+Result_File_Folder=sampledata/
+Result_File_Name_with_Regular_Expression=35.7371_Grinding_*_chr.txt
+Dir_to_Tolerance_Template_CSV_File=sampledata/NTemplate.csv
