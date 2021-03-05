@@ -1,6 +1,6 @@
 # Awesome_Gear_Pro_Report
 
-Gleason Gear Inspection System can report the Gear Profile Slop Dev. $fH\alpha$ according to different height levels. This allows GM to assign different tolerance zone to the coast side of the grinding gears due to the grinding gear's nature bias.
+Gleason Gear Inspection System can report the Gear Profile Slop Dev. <img src="https://render.githubusercontent.com/render/math?math=fH\alpha m"> according to different height levels. This allows GM to assign different tolerance zone to the coast side of the grinding gears due to the grinding gear's nature bias.
 
 For example, if a helical gear's profile was measured on 3 teeth (#1, 11, 21),  and 3 height levels (top, middle, bottom). Gleason can report can report:
 
