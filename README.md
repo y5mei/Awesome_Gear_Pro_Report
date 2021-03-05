@@ -4,17 +4,21 @@ Gleason Gear Inspection System can report the Gear Profile Slop Dev. $fH\alpha$ 
 
 For example, if a helical gear's profile was measured on 3 teeth (#1, 11, 21),  and 3 height levels (top, middle, bottom). Gleason can report can report:
 
-$fH\alpha m(Top)=\frac{fH\alpha1(Top)+fH\alpha11(Top)+fH\alpha21(Top)}{3}$
 
-$fH\alpha m(Mid)=\frac{fH\alpha1(Mid)+fH\alpha11(Mid)+fH\alpha21(Mid)}{3}$
+<img src="https://render.githubusercontent.com/render/math?math=fH\alpha m(Top)=\frac{fH\alpha1(Top) %2B fH\alpha11(Top)%2BfH\alpha21(Top)}{3}">
 
-$fH\alpha m(Bot)=\frac{fH\alpha1(Bot)+fH\alpha11(Bot)+fH\alpha21(Bot)}{3}$
 
+<img src="https://render.githubusercontent.com/render/math?math=fH\alpha m(Mid)=\frac{fH\alpha1(Mid)%2BfH\alpha11(Mid)%2BfH\alpha21(Mid)}{3}">
+
+
+<img src="https://render.githubusercontent.com/render/math?math=fH\alpha m(Bot)=\frac{fH\alpha1(Bot)%2BfH\alpha11(Bot)%2BfH\alpha21(Bot)}{3}">
 
 
 While, Zeiss Gear Pro can only report the grand mean over all twist checks:
 
-$fH\alpha m =\frac{fH\alpha1(Top)+fH\alpha11(Top)+fH\alpha21(Top)+fH\alpha1(Mid)+fH\alpha11(Mid)+fH\alpha21(Mid)+fH\alpha1(Bot)+fH\alpha11(Bot)+fH\alpha21(Bot)}{9}$
+<img src="https://render.githubusercontent.com/render/math?math=fH\alpha m =\frac{fH\alpha1(Top)%2BfH\alpha11(Top)%2BfH\alpha21(Top)%2BfH\alpha1(Mid)%2BfH\alpha11(Mid)%2BfH\alpha21(Mid)%2BfH\alpha1(Bot)%2BfH\alpha11(Bot)%2BfH\alpha21(Bot)}{9}">
+
+
 
 
 
