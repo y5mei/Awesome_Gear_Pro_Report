@@ -1,27 +1,32 @@
 from glob import iglob
 from pandas import read_table, read_csv, DataFrame, ExcelWriter
-from os import path, startfile
+from os import path, startfile,remove
+from time import sleep
 from dataclasses import make_dataclass
 
 
-
+# Do not use Openpyxl, use XLSXWriter
 
 # Define Directory to work with
 # Read the directory information from the Config File
 Config_File = open('Awesome_Gear_Pro_Report_Config.txt', 'r')
-Config_File = open('Awesome_Gear_Pro_Report_Config.txt', 'r')
 Lines = Config_File.read().splitlines()
-DIRNAME = Lines[0].split("=")[1]
-INPUT_FILE = Lines[1].split("=")[1]
-TEMPLATE_DIR = Lines[2].split("=")[1]
-mystr = DIRNAME + INPUT_FILE
-
+ZEISSDIRNAME = Lines[0].split("=")[1]
+QCCALCDIRNAME =Lines[1].split("=")[1]
+INPUT_FILE = Lines[2].split("=")[1]
+TEMPLATE_DIR = Lines[3].split("=")[1]
+myzeissstr = ZEISSDIRNAME + INPUT_FILE
+myqccalstr = QCCALCDIRNAME + INPUT_FILE
 # Generate the file list
 # Then Load a Source Data File
 
 
+
+## Find the latest file from both the Zeiss Result folder and and QC_Calc result folder
 myfileList = []
-for file_name in iglob(mystr, recursive=True):
+for file_name in iglob(myzeissstr, recursive=True):
+    myfileList.append(file_name)
+for file_name in iglob(myqccalstr, recursive=True):
     myfileList.append(file_name)
     # print(file_name)
 # Get the latest modified file
@@ -104,7 +109,7 @@ result = DataFrame(dim_list)
 
 # write the result to a excel file
 saved_file_name = path.basename(latest_file)
-saved_file_name = DIRNAME+saved_file_name
+saved_file_name = ZEISSDIRNAME+saved_file_name
 
 writer = ExcelWriter(saved_file_name+".xlsx")
 result.to_excel(writer, 'Sheet1')
@@ -112,7 +117,7 @@ workbook1 = writer.book
 worksheets = writer.sheets
 worksheet1 = worksheets['Sheet1']
 # Make the description column longer
-worksheet1.set_column("C:C", 35)
+worksheet1.set_column("C:C", 25)
 # worksheet1.column_dimensions['C'].width = 35
 format1 = workbook1.add_format({'bold':  True, 'bg_color': '#FFC7CE', 'font_color': '#9C0006'})
 format2 = workbook1.add_format({'bold':  True, 'align': 'left', 'valign': 'top', 'text_wrap': False})
@@ -141,6 +146,9 @@ if len(out_of_tolerance_list) > 0:
 worksheet1.write(len(result) + 5, 0, text5)
 worksheet1.set_row(len(result) + 5, cell_format=format2)
 writer.save()
+writer.close()
 
 # Print the result from the absolute path
 startfile(path.abspath(saved_file_name+".xlsx"), "print")
+sleep(10) # sleep for 10 seconds
+remove(saved_file_name+".xlsx") #delete the excel file
