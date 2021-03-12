@@ -1,3 +1,12 @@
-Result_File_Folder=sampledata/
+ZEISSResult_File_Folder=C:/Users/Public/Documents/Zeiss/CALYPSO/workarea/results/
+QCCalcResult_File_Folder=C:/Program Files (x86)/Zeiss/GearNT/Reporting/
 Result_File_Name_with_Regular_Expression=35.7371_Grinding_*_chr.txt
-Dir_to_Tolerance_Template_CSV_File=sampledata/NTemplate.csv
+Dir_to_Tolerance_Template_CSV_File=C:/Job/Python/35.7371_Helical_Grinding_1stoff/Template.csv
+
+## Note ##
+Only the top 4 lines will work
+Line1 is the Zeiss Gear Pro result directory
+Line2 is the directory where QC_Calc save the result to, keep it the same as Line1 no QC_Calc installed
+Line3 is the regular expression about which part number to read
+Line4 is the directory for the Template CSV File (0 index used in the CSV File)
+!!!Do not put any sapce before and after the equal sign!!! 
